@@ -6,3 +6,4 @@
 background for taking screenshot.
 click on window changes color black -> gray -> white .
 
+[デモページ](https://ryjkmr.github.io/background_for_screenshot/)
