@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background_for_screenshot</title>
+</head>
+
+<body class="black" id="bg_body">
+  <!-- 
+background for taking screenshot.
+click on window changes color black -> gray -> white .
+   -->
+
+  <style>
+    .white {
+      background-color: #FFFFFF
+    }
+
+    .black {
+      background-color: #000000
+    }
+
+    .gray {
+      background-color: #7272727a
+    }
+  </style>
+  <script>
+    const bg_body = document.getElementById("bg_body");
+    window.addEventListener('click', function (e) {
+      switch (bg_body.className) {
+        case "black":
+          bg_body.classList.add("gray");
+          bg_body.classList.remove("black");
+          break;
+        case "gray":
+          bg_body.classList.add("white");
+          bg_body.classList.remove("gray");
+          break;
+        case "white":
+          bg_body.classList.add("black");
+          bg_body.classList.remove("white");
+          break;
+      }
+    });
+  </script>
+</body>
+
+</html>
