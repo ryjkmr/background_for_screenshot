@@ -29,11 +29,12 @@ click on window changes color black -> gray -> white .
   </style>
   <script>
     const bg_body = document.getElementById("bg_body");
+     bg_body.classList.remove("vsc-initialized");
     window.addEventListener('click', function (e) {
       console.log("clicked");
       console.log(bg_body.className);
       console.log(bg_body.classList.item(0));
-      switch (bg_body.classList.item(0)) {
+      switch (bg_body.className) {
         case "black":
           bg_body.classList.add("gray");
           bg_body.classList.remove("black");
